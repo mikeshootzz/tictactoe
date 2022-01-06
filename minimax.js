@@ -27,3 +27,4 @@ function ai(){
     let td = document.getElementById(`${position}`).innerHTML = player;
     playerArray[position] = player;
 }
+//please git stop killing my repo thanks
