@@ -1,5 +1,5 @@
 let table = document.getElementById('game')
-let playerArray = [];//new Array(9)
+let playerArray = new Array(9)
 
 function generateBoard(size){
     let counter = 0;
@@ -24,7 +24,10 @@ function currentPlayer(){
 }
 
 function colorChange(id){
-    if (player == "X"){
+    if (playerArray[id] !== undefined){
+        alert("This spot is already full");
+    }
+    else if (player == "X"){
         currentPlayer();
         player = "O"
         let td = document.getElementById(`${id}`).innerHTML = player;
@@ -85,16 +88,8 @@ function colorChange(id){
             window.location.reload();
         }
     }
-    console.log("Executed");
-    let draw = false;
-    for (let i = 0; i === playerArray.length; i++){
-        if (playerArray[i] !== null){
-            draw = true;
-        } else {
-            draw = false;
-        }
-    }
-    if (draw){
-        alert('Draw');
+    //Checks if the array doesn't contain undefined (!)
+    if (!playerArray.includes(undefined)){
+        alert("Draw");
     }
 }
