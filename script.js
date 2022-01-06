@@ -32,13 +32,16 @@ function colorChange(id){
         player = "O"
         let td = document.getElementById(`${id}`).innerHTML = player;
         playerArray[id] = player;
+        player = "X";
+        ai()
     }
-    else if (player == "O"){
-        currentPlayer();
-        player = "X"
-        let td = document.getElementById(`${id}`).innerHTML = player;
-        playerArray[id] = player;
-    }
+    // else if (player == "O"){
+    //     currentPlayer();
+    //     player = "X"
+    //     // let td = document.getElementById(`${id}`).innerHTML = player;
+    //     // playerArray[id] = player;
+    //     ai();
+    // }
 
     if (playerArray[0] == "X" || playerArray[0] == "O"){
         if (playerArray[0] == playerArray[1] && playerArray[1] == playerArray[2]){
@@ -91,5 +94,6 @@ function colorChange(id){
     //Checks if the array doesn't contain undefined (!)
     if (!playerArray.includes(undefined)){
         alert("Draw");
+        window.location.reload();
     }
 }
