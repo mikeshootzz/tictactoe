@@ -16,32 +16,32 @@ function generateBoard(size){
     }
 }
 generateBoard(3);
-let player = "X";
+let player = "O";
 
 let playerdiv = document.getElementById('player');
 function currentPlayer(){
     playerdiv.innerHTML = `Player: ${player}`;
 }
 
+
 function colorChange(id){
     if (playerArray[id] !== undefined){
         alert("This spot is already full");
     }
-    else if (player == "X"){
+    else if (player === "O"){
         currentPlayer();
-        player = "O"
+        //player = "O"
         let td = document.getElementById(`${id}`).innerHTML = player;
         playerArray[id] = player;
-        player = "X";
-        ai()
+        //player = "X";
     }
-    // else if (player == "O"){
-    //     currentPlayer();
-    //     player = "X"
-    //     // let td = document.getElementById(`${id}`).innerHTML = player;
-    //     // playerArray[id] = player;
-    //     ai();
-    // }
+    else if (player === "O"){
+        currentPlayer();
+        player = "X"
+        // let td = document.getElementById(`${id}`).innerHTML = player;
+        // playerArray[id] = player;
+        ai(player);
+    }
 
     if (playerArray[0] == "X" || playerArray[0] == "O"){
         if (playerArray[0] == playerArray[1] && playerArray[1] == playerArray[2]){
