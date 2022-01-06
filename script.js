@@ -1,5 +1,5 @@
 let table = document.getElementById('game')
-let playerArray = new Array(9)
+let playerArray = [];//new Array(9)
 
 function generateBoard(size){
     let counter = 0;
@@ -17,13 +17,21 @@ function generateBoard(size){
 }
 generateBoard(3);
 let player = "X";
+
+let playerdiv = document.getElementById('player');
+function currentPlayer(){
+    playerdiv.innerHTML = `Player: ${player}`;
+}
+
 function colorChange(id){
     if (player == "X"){
+        currentPlayer();
         player = "O"
         let td = document.getElementById(`${id}`).innerHTML = player;
         playerArray[id] = player;
     }
     else if (player == "O"){
+        currentPlayer();
         player = "X"
         let td = document.getElementById(`${id}`).innerHTML = player;
         playerArray[id] = player;
@@ -77,11 +85,16 @@ function colorChange(id){
             window.location.reload();
         }
     }
-
-
-
-
-
-
-
+    console.log("Executed");
+    let draw = false;
+    for (let i = 0; i === playerArray.length; i++){
+        if (playerArray[i] !== null){
+            draw = true;
+        } else {
+            draw = false;
+        }
+    }
+    if (draw){
+        alert('Draw');
+    }
 }
