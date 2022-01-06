@@ -15,7 +15,7 @@
 // }
 
 //i mean.... it works i guess
-function ai(){
+function ai(player){
     let corrector = false;
     let position = Math.floor(Math.random() * 10);
     while (!corrector){
@@ -24,6 +24,6 @@ function ai(){
             corrector = true;
         }
     }
-    let td = document.getElementById(`${position}`).innerHTML = player;
+    let td = document.getElementById(`${position}`).innerHTML = "X";
     playerArray[position] = player;
 }
