@@ -28,7 +28,7 @@ function colorChange(id){
         alert("This spot is already full");
     }
     else if (player == "X"){
-        currentPlayer();
+        //currentPlayer();
         player = "O"
         let td = document.getElementById(`${id}`).innerHTML = player;
         playerArray[id] = player;
@@ -43,50 +43,50 @@ function colorChange(id){
     //     ai();
     // }
 
-    if (playerArray[0] == "X" || playerArray[0] == "O"){
-        if (playerArray[0] == playerArray[1] && playerArray[1] == playerArray[2]){
+    if (playerArray[0] === "X" || playerArray[0] === "O"){
+        if (playerArray[0] === playerArray[1] && playerArray[1] === playerArray[2]){
             alert(`Player ${playerArray[1]} won!`);
             window.location.reload();
         }
     }
-    if (playerArray[5] == "X" || playerArray[5] == "O"){
-        if (playerArray[3] == playerArray[4] && playerArray[4] == playerArray[5]){
+    if (playerArray[5] === "X" || playerArray[5] === "O"){
+        if (playerArray[3] === playerArray[4] && playerArray[4] === playerArray[5]){
             alert(`Player ${playerArray[3]} won!`);
             window.location.reload();
         }
     }
-    if (playerArray[7] == "X" || playerArray[7] == "O"){
-        if (playerArray[6] == playerArray[7] && playerArray[7] == playerArray[8]){
+    if (playerArray[7] === "X" || playerArray[7] === "O"){
+        if (playerArray[6] === playerArray[7] && playerArray[7] === playerArray[8]){
             alert(`Player ${playerArray[6]} won!`);
             window.location.reload();
         }
     }
-    if (playerArray[3] == "X" || playerArray[3] == "O"){
-        if (playerArray[0] == playerArray[3] && playerArray[3] == playerArray[6]){
+    if (playerArray[3] === "X" || playerArray[3] === "O"){
+        if (playerArray[0] === playerArray[3] && playerArray[3] === playerArray[6]){
             alert(`Player ${playerArray[0]} won!`);
             window.location.reload();
         }
     }
-    if (playerArray[1] == "X" || playerArray[1] == "O"){
-        if (playerArray[1] == playerArray[4] && playerArray[4] == playerArray[7]){
+    if (playerArray[1] === "X" || playerArray[1] === "O"){
+        if (playerArray[1] === playerArray[4] && playerArray[4] === playerArray[7]){
             alert(`Player ${playerArray[1]} won!`);
             window.location.reload();
         }
     }
-    if (playerArray[8] == "X" || playerArray[8] == "O"){
-        if (playerArray[2] == playerArray[5] && playerArray[5] == playerArray[8]){
+    if (playerArray[8] === "X" || playerArray[8] === "O"){
+        if (playerArray[2] === playerArray[5] && playerArray[5] === playerArray[8]){
             alert(`Player ${playerArray[2]} won!`);
             window.location.reload();
         }
     }
-    if (playerArray[4] == "X" || playerArray[4] == "O"){
-        if (playerArray[0] == playerArray[4] && playerArray[4] == playerArray[8]){
+    if (playerArray[4] === "X" || playerArray[4] === "O"){
+        if (playerArray[0] === playerArray[4] && playerArray[4] === playerArray[8]){
             alert(`Player ${playerArray[4]} won!`);
             window.location.reload();
         }
     }
-    if (playerArray[2] == "X" || playerArray[2] == "O"){
-        if (playerArray[2] == playerArray[4] && playerArray[4] == playerArray[6]){
+    if (playerArray[2] === "X" || playerArray[2] === "O"){
+        if (playerArray[2] === playerArray[4] && playerArray[4] === playerArray[6]){
             alert(`Player ${playerArray[2]} won!`);
             window.location.reload();
         }
