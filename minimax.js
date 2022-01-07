@@ -16,15 +16,16 @@
 
 //i mean.... it works i guess
 function ai(){
-    let corrector = false;
-    let position = Math.floor(Math.random() * 10);
-    while (!corrector){
-        position = Math.floor(Math.random() * 10);
-        if (playerArray[position] === undefined){
-            corrector = true;
+    if (playerArray.includes(undefined)){
+        let corrector = false;
+        let position = Math.floor(Math.random() * 9);
+        while (!corrector){
+            position = Math.floor(Math.random() * 9);
+            if (playerArray[position] === undefined){
+                corrector = true;
+            }
         }
+        let td = document.getElementById(`${position}`).innerHTML = player;
+        playerArray[position] = player;
     }
-    let td = document.getElementById(`${position}`).innerHTML = player;
-    playerArray[position] = player;
 }
-//please git stop killing my repo thanks
