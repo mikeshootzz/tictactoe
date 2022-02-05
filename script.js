@@ -66,57 +66,58 @@ function winnerChecking(){
     if (playerArray[0] !== undefined){
         if (playerArray[0] === playerArray[1] && playerArray[1] === playerArray[2]){
             alert(`Player ${playerArray[1]} won!`);
-            window.location.reload();
+            return true;
         }
     }
     if (playerArray[5] !== undefined){
         if (playerArray[3] === playerArray[4] && playerArray[4] === playerArray[5]){
             alert(`Player ${playerArray[3]} won!`);
-            window.location.reload();
+            return true;
         }
     }
     if (playerArray[7] !== undefined){
         if (playerArray[6] === playerArray[7] && playerArray[7] === playerArray[8]){
             alert(`Player ${playerArray[6]} won!`);
-            window.location.reload();
+            return true;
         }
     }
     if (playerArray[3] !== undefined){
         if (playerArray[0] === playerArray[3] && playerArray[3] === playerArray[6]){
             alert(`Player ${playerArray[0]} won!`);
-            window.location.reload();
+            return true;
         }
     }
     if (playerArray[1] !== undefined){
         if (playerArray[1] === playerArray[4] && playerArray[4] === playerArray[7]){
             alert(`Player ${playerArray[1]} won!`);
-            window.location.reload();
+            return true;
         }
     }
     if (playerArray[8] !== undefined){
         if (playerArray[2] === playerArray[5] && playerArray[5] === playerArray[8]){
             alert(`Player ${playerArray[2]} won!`);
-            window.location.reload();
+            return true;
         }
     }
     if (playerArray[4] !== undefined){
         if (playerArray[0] === playerArray[4] && playerArray[4] === playerArray[8]){
             alert(`Player ${playerArray[4]} won!`);
-            window.location.reload();
+            return true;
         }
     }
     if (playerArray[2] !== undefined){
         if (playerArray[2] === playerArray[4] && playerArray[4] === playerArray[6]){
             alert(`Player ${playerArray[2]} won!`);
-            window.location.reload();
+            return true
         }
     }
     //Checks if the array doesn't contain undefined (!)
     if (!playerArray.includes(undefined)){
         alert("Draw");
-        window.location.reload();
+        return true;
     }
 }
+
 
 //declaring the function for the computer player
 function colorChange(id){
